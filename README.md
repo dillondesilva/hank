@@ -6,6 +6,12 @@ hank is a simple CLI utility that focuses on a single task - making error messag
 
 Simply add `hank` before compiling/running your program to get a clear, readable explanation of any errors that occur.
 
+
+
+https://github.com/user-attachments/assets/7c49e0ea-ed79-4307-a2f0-4080e01b48f7
+
+
+
 ```
 hank python <Your Python Program Here>
 ----------------------------------------
