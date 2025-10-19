@@ -1,4 +1,4 @@
-module slfy
+module hank
 
 go 1.24.3
 
