@@ -3,10 +3,10 @@ package main
 import (
 	"bytes"
 	"fmt"
+	"hank/internal/ai"
+	"hank/internal/render"
 	"os"
 	"os/exec"
-	"slfy/internal/ai"
-	"slfy/internal/render"
 	"strings"
 )
 

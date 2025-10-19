@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"hank/internal/utils"
 	"io"
 	"net/http"
-	"slfy/internal/utils"
 )
 
 type ChatRequest struct {

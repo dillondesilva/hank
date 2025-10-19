@@ -1,23 +1,23 @@
 #!/bin/bash
 
 # Build the binary
-echo "Building slfy..."
-if ! go build -o slfy main.go; then
-    echo "Error: Failed to build slfy"
+echo "Building hank..."
+if ! go build -o hank main.go; then
+    echo "Error: Failed to build hank"
     exit 1
 fi
 
 # Make it executable
-chmod +x slfy
+chmod +x hank
 
 # Move to /usr/local/bin
-echo "Installing slfy to /usr/local/bin..."
-if ! sudo mv slfy /usr/local/bin/; then
-    echo "Error: Failed to install slfy. You may need to run with sudo or check permissions."
+echo "Installing hank to /usr/local/bin..."
+if ! sudo mv hank /usr/local/bin/; then
+    echo "Error: Failed to install hank. You may need to run with sudo or check permissions."
     exit 1
 fi
 
-echo "✅ slfy installed successfully to /usr/local/bin/slfy"
+echo "✅ hank installed successfully to /usr/local/bin/hank"
 
 # Check if /usr/local/bin is in PATH
 if ! echo "$PATH" | grep -q "/usr/local/bin"; then
@@ -33,4 +33,4 @@ else
 fi
 
 echo ""
-echo "You can now run 'slfy' from anywhere!"
+echo "You can now run 'hank' from anywhere!"
