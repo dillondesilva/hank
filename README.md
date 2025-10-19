@@ -2,7 +2,7 @@
 
 No matter your level of experience, error messages can still be abstract, hard and painful to look at.
 
-hank is a simple CLI utility that focuses on a single task - making error messages digestible and easy to understand. You can think of this as just another system utility like `grep`, `ls` or `echo` that is at your fingertips for debugging a program.
+hank is a simple CLI utility that focuses on a single task - making error messages digestible and easy to understand. **You can think of this as just another system utility like `grep`, `ls` or `echo` that is at your fingertips for debugging a program.**
 
 Simply add `hank` before compiling/running your program to get a clear, readable explanation of any errors that occur.
 
