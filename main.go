@@ -3,11 +3,12 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"hank/internal/ai"
-	"hank/internal/render"
 	"os"
 	"os/exec"
 	"strings"
+
+	"github.com/dillondesilva/hank/internal/ai"
+	"github.com/dillondesilva/hank/internal/render"
 )
 
 func main() {

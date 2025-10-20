@@ -4,9 +4,10 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"hank/internal/utils"
 	"io"
 	"net/http"
+
+	"github.com/dillondesilva/hank/internal/utils"
 )
 
 type ChatRequest struct {
