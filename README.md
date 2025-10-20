@@ -38,6 +38,17 @@ Every developer/engineer has their own, unique approach to AI in their workflow.
 
 - To build from source, you must have `golang` installed (`>= 1.24.3`)
 
+### Quick Install
+
+If you have `go >= 1.24.3` then you are in luck! `hank` can be installed by running the following:
+
+```
+go install github.com/dillondesilva/hank@main
+```
+
+Also ensure you have Go's bin folder added to your path. This can be done by adding the following line to your
+`.zshrc`, `.bash_profile`, etc config files and running `source ~/.zshrc <Or bash_profile, bashrc etc>`
+
 ### Installation
 
 Currently, installation is only supported via building from source:
