@@ -1,4 +1,4 @@
-module hank
+module github.com/dillondesilva/hank
 
 go 1.24.3
 
