@@ -47,7 +47,13 @@ go install github.com/dillondesilva/hank@main
 ```
 
 Also ensure you have Go's bin folder added to your path. This can be done by adding the following line to your
-`.zshrc`, `.bash_profile`, etc config files and running `source ~/.zshrc <Or bash_profile, bashrc etc>`
+`.zshrc`, `.bash_profile`, etc config files:
+
+```
+export PATH=$PATH:$(go env GOPATH)/bin
+```
+
+Then run `source ~/.zshrc <Or bash_profile, bashrc etc>` :)
 
 ### Installation
 
