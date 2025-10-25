@@ -38,7 +38,18 @@ Every developer/engineer has their own, unique approach to AI in their workflow.
 
 - To build from source, you must have `golang` installed (`>= 1.24.3`)
 
-### Quick Install
+## Installation
+
+### `brew` Install
+
+Whilst `hank` is currently not a part of homebrew core, it can be installed via taps as follows:
+
+```
+brew tap dillondesilva/hank https://github.com/dillondesilva/hank
+brew install hank
+```
+
+### Go Install
 
 If you have `go >= 1.24.3` then you are in luck! `hank` can be installed by running the following:
 
@@ -55,7 +66,17 @@ export PATH=$PATH:$(go env GOPATH)/bin
 
 Then run `source ~/.zshrc <Or bash_profile, bashrc etc>` :)
 
-### Installation
+### GitHub Releases
+
+There is a (rough) setup to support distributing `hank` via GH Releases. Following installing the
+appropriate one for your system and extracting the `.tar` contents, you can run:
+
+```
+mv <installation-dir>/hank
+chmod +x hank
+```
+
+### Building from Source
 
 Currently, installation is only supported via building from source:
 
@@ -66,8 +87,6 @@ chmod +x install.sh
 ./install.sh
 ```
 
-Improvements to this are coming soon
-
-### Contributing Guide
+## Contributing Guide
 
 If you have any ideas or feature requests, please open an Issue in the GitHub Issues page.
