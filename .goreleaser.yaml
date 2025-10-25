@@ -51,3 +51,16 @@ release:
     ---
 
     Released by [GoReleaser](https://github.com/goreleaser/goreleaser).
+
+brews:
+  - name: hank
+    repository:
+      owner: dillondesilva
+      name: hank
+    homepage: https://github.com/dillondesilva/hank
+    description: "A CLI utility that makes error messages digestible and easy to understand using local LLMs"
+    license: Apache-2.0
+    install: |
+      bin.install "hank"
+    test: |
+      system "#{bin}/hank", "--version"
