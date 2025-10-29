@@ -5,21 +5,21 @@
 class Hank < Formula
   desc "A CLI utility that makes error messages digestible and easy to understand using local LLMs"
   homepage "https://github.com/dillondesilva/hank"
-  version "0.1.1"
+  version "0.1.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dillondesilva/hank/releases/download/v0.1.1/hank_Darwin_x86_64.tar.gz"
-      sha256 "47ca417c8d5df41ec9017bd0d97f456418c2f4ef5efaebf3f6b334af35caa5fe"
+      url "https://github.com/dillondesilva/hank/releases/download/v0.1.2/hank_Darwin_x86_64.tar.gz"
+      sha256 "9d8b9aed5254f0b0f3f6c59fa577ae56ce5f10904ab3f671560c31a80cf18b69"
 
       def install
         bin.install "hank"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dillondesilva/hank/releases/download/v0.1.1/hank_Darwin_arm64.tar.gz"
-      sha256 "d76caa458b14f80833ffea2640c66f85dce30ba860097576014dc158848596a1"
+      url "https://github.com/dillondesilva/hank/releases/download/v0.1.2/hank_Darwin_arm64.tar.gz"
+      sha256 "f7354efec48cd39017d6d0962db2ecc4b42fb8891af97f40d8afdc07bd5b61cc"
 
       def install
         bin.install "hank"
@@ -29,15 +29,15 @@ class Hank < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dillondesilva/hank/releases/download/v0.1.1/hank_Linux_x86_64.tar.gz"
-      sha256 "0c98127da1672f94216ab9de7aafedfb76c9cf949b05dd23931546def24c3627"
+      url "https://github.com/dillondesilva/hank/releases/download/v0.1.2/hank_Linux_x86_64.tar.gz"
+      sha256 "5360ffd847537c4ac38a894b821f9b9b3438856968f44196adf4b2f250e0df5e"
       def install
         bin.install "hank"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dillondesilva/hank/releases/download/v0.1.1/hank_Linux_arm64.tar.gz"
-      sha256 "459fd7d1657ac50c3e009b75ea8e04762db0acb4008cad3e6b26baddedb1d88a"
+      url "https://github.com/dillondesilva/hank/releases/download/v0.1.2/hank_Linux_arm64.tar.gz"
+      sha256 "190b1b0ac21e1687deabe7dc979317a21dfe0ff1f3793620b20b5acaf5ef1944"
       def install
         bin.install "hank"
       end
