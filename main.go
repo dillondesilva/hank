@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"fmt"
+	"io"
 	"os"
 	"os/exec"
 	"strings"
@@ -28,16 +29,18 @@ func main() {
 	cmd := exec.Command(os.Args[1], os.Args[2:]...)
 
 	var stdout, stderr bytes.Buffer
-	cmd.Stdout = &stdout
-	cmd.Stderr = &stderr
+	cmd.Stdout = io.MultiWriter(os.Stdout, &stdout)
+	cmd.Stderr = io.MultiWriter(os.Stderr, &stderr)
+	err := cmd.Run()
 
-	if err := cmd.Run(); err != nil {
-		fmt.Fprintf(os.Stderr, "Error starting command: %v\n", err)
-		stdOut := stdout.String()
-		stdErr := stderr.String()
+	stdOut := stdout.String()
+	stdErr := stderr.String()
 
-		fmt.Fprintf(os.Stdout, "%s\n", stdOut)
-		fmt.Fprintf(os.Stderr, "%s\n", stdErr)
+	if stdErr != "" {
+		fmt.Fprintf(os.Stderr, "Detected output to stderr. Running hank to help you understand the error...\n\n")
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "Error state of original command: %v\n", err)
+		}
 
 		// Build the prompt from the command and error
 		prompt := ai.BuildPromptFromCommandAndError(originalCmd, stdErr, stdOut)
@@ -51,11 +54,10 @@ func main() {
 		})
 
 		if err != nil {
-			fmt.Fprintf(os.Stderr, "Error calling LMStudio LLM: %v\n", err)
+			fmt.Fprintf(os.Stderr, "Error calling LMStudio LLM: %v\nPlease ensure your LMStudio server is running and reachable at http://127.0.0.1:1234", err)
 			os.Exit(1)
 		}
 
 		render.RenderText(summary)
-		os.Exit(1)
 	}
 }
